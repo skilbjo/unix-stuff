@@ -1,0 +1,9 @@
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[user]
+	email = john.skilbeck@gmail.com
+	name = skilbjo
+[color]
+	ui = true

@@ -1,0 +1,6 @@
+# To send a file:
+
+cat file | ssh pi@skilbjo.duckdns.org "cat > remote"
+
+# To receive a file:
+ssh pi@skilbjo.duckdns.org "cat remote" > copy
