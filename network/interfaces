@@ -1,0 +1,16 @@
+# Local
+auto lo
+iface lo inet loopback
+
+# Ethernet... auto = send requests on startup
+# auto eth0
+iface eth0 inet dhcp
+
+# Wireless
+allow-hotplug wlan0
+auto wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+# Default
+iface default inet dhcp
