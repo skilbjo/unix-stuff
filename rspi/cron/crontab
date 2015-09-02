@@ -1,0 +1,13 @@
+
+# Ping the router every minute
+*/1 * * * * ping -c 1 192.168.1.1
+
+# Update DuckDNS every 5 minutes for new IP address
+*/5 * * * * ~/unix/duckdns/duck.sh >/dev/null 2>&1
+
+
+
+
+
+
+

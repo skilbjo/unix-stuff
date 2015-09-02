@@ -1,15 +1,4 @@
 #!/bin/sh -e
-#
-# rc.local
-#
-# This script is executed at the end of each multiuser runlevel.
-# Make sure that the script will "exit 0" on success or any other
-# value on error.
-#
-# In order to enable or disable this script just change the execution
-# bits.
-#
-# By default this script does nothing.
 
 # Print the IP address
 _IP=$(hostname -I) || true
@@ -18,20 +7,11 @@ if [ "$_IP" ]; then
 fi
 
 # Startup Redirect HTTP --> HTTPS app
-redirect_dir=~/node/app/dropkey
-cd "$redirect_dir"
-nohup forever app.js >logfile 2>&1 & 
+/usr/local/bin/node /home/pi/node/app/redirect/app.js 2>&1 & 
 
 # Startup dropkey app
-dropkey_dir=~/node/app/dropkey
-cd "$dropkey_dir"
-nohup forever ./node_modules/.bin/gulp >logfile 2>&1 & 
-
+su -l pi -c '/home/pi/node/dropkey.git/hooks/post-receive 2>&1 &'
 
 exit 0
 
-# postgres on rspi2
-# mkdir /var/run/postgresql
-# sudo chown -R postgres:postgres /var/run/postgresql
-# sudo -u postgres postgres -D /usr/local/pgsql/data >logfile 2>&1 &
 
