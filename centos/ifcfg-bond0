@@ -1,0 +1,12 @@
+DEVICE=bond0
+NAME=bond0
+TYPE=Bond
+BONDING_MASTER=yes
+IPADDR=static ip address for the server
+PREFIX=24
+ONBOOT=yes
+BOOTPROTO=none
+BONDING_OPTS="mode=4 miimon=100"
+DNS1=dns server
+DNS2=dns server
+SEARCH=add the search paths here
