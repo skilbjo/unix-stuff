@@ -7,7 +7,7 @@ if [ "$_IP" ]; then
 fi
 
 # Startup Redirect HTTP --> HTTPS app
-/usr/local/bin/node /home/pi/node/app/redirect/app.js 2>&1 & 
+su -l pi -c 'node /home/pi/node/app/redirect/app.js 2>&1 &' 
 
 # Startup dropkey app
 su -l pi -c '/home/pi/node/dropkey.git/hooks/post-receive 2>&1 &'
