@@ -1,0 +1,4 @@
+
+# add this config file on pi3 to disable bluetooth and enable UART
+dtoverlay=pi3-disable-bt
+systemctl disable hciuart
