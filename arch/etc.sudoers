@@ -1,0 +1,4 @@
+
+root ALL=(ALL) ALL
+skilbjo ALL=(ALL) ALL
+%newgroup ALL=(ALL) ALL

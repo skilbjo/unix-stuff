@@ -17,3 +17,4 @@ Output
 	mmcblk0p6 part   63M 
 	mmcblk0p7 part 28.5G 
 
+screen /dev/tty.usbserial 115200

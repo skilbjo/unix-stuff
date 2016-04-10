@@ -1,0 +1,5 @@
+
+%newgroup ALL=(ALL) ALL
+skilbjo ALL=(ALL) NOPASSWD: /sbin/shutdown
+skilbjo ALL=(ALL) NOPASSWD: /sbin/reboot
+skilbjo ALL=(ALL) NOPASSWD: /usr/bin/pacman
