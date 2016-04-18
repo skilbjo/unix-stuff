@@ -1,0 +1,16 @@
+		Welcome to Arch Linux ARM
+
+
+
+		ls /dev/mmcblk0*
+		/dev/mmcblk0  /dev/mmcblk0p1  /dev/mmcblk0p2
+
+		sudo mount /dev/mmcblk0p2 /mnt
+
+		sudo rsync -axv / /mnt
+
+Comment out /etc/fstab /dev/sda1 line:
+
+# <file system> <dir>   <type>  <options>               <dump>  <pass>
+/dev/mmcblk0p1  /boot   vfat    defaults                 0       0
+/dev/sda1       /       ext4    defaults,noatime,discard 0      1  
